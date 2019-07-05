@@ -44,7 +44,7 @@ public class PostController {
 		String str = auth.getName();
 		System.out.println(str );
 		
-		if( str != null ) {
+		if( !str.equalsIgnoreCase("anonymousUser") ) {
 			
 		
 		
@@ -101,7 +101,7 @@ public class PostController {
 		String str = auth.getName();
 		System.out.println(str );
 		
-		if( str != null ) {
+		if( !str.equalsIgnoreCase("anonymousUser") ) {
 		
 		System.out.println( id );
 		System.out.println( post );
@@ -126,7 +126,7 @@ public class PostController {
 		String str = auth.getName();
 		System.out.println(str );
 		
-		if( str != null ) {
+		if( !str.equalsIgnoreCase("anonymousUser") ) {
 		
 		System.out.println( post );
 		
@@ -155,7 +155,7 @@ public class PostController {
 			String str = auth.getName();
 			System.out.println(str );
 			
-			if( str != null ) {
+			if( !str.equalsIgnoreCase("anonymousUser") ) {
 				
 
 				postsRepo.deleteById(id);
@@ -175,7 +175,7 @@ public class PostController {
 			System.out.println(str );
 			
 			
-			if( str != null ) {
+			if( !str.equalsIgnoreCase("anonymousUser") ) {
 				
 
 				UserIdName uin = new UserIdName();
