@@ -83,7 +83,7 @@ public class PhotoController {
 			String answer;
 			// ska mbaruar duhet te shtohet nje if else per te pare prapashtesat e fotove
 			
-			if( user != null && ( files.getOriginalFilename().endsWith(".jpg") || files.getOriginalFilename().endsWith(".png") )) {
+			if( !user.equalsIgnoreCase("anonymousUser") && ( files.getOriginalFilename().endsWith(".jpg") || files.getOriginalFilename().endsWith(".png") )) {
 				System.out.println("/upload brenda if " );
 				
 				photoService.uploadPhoto(files , user );
