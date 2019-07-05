@@ -127,7 +127,7 @@ public class UserController {
 		String str = auth.getName();
 		System.out.println(str );
 		
-		if( str != null ) {
+		if( !str.equalsIgnoreCase("anonymousUser") ) {
 			System.out.println("/deleteacount if" );
 		
 		Perdorues perdorues = perdoruesRepo.getPerdoruesByEmail(str);
